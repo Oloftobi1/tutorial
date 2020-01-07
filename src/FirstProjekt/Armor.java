@@ -3,26 +3,47 @@ package FirstProjekt;
 public class Armor {
     public String armorname;
     public int armor;
-    public Armorhead head;
+
     // creat armorhead... add them up to int armor.
 
-    public Armor(String armorname,Armorhead head, int armor) {
+    public Armor(String armorname, Armorhead head, int armor) {
         this.armorname = armorname;
-      //  head.getArmorhead() = armor;
+        //  head.getArmorhead() = armor;
     }
-    public int setArmor(int armor) {
-        return armor;
-    }public int getArmor() {
-        return armor;
-    }
-
-    public  String setArmorname(String armorname) {
+    public String setArmorname(String armorname) {
         this.armorname = armorname;
         return armorname;
-    }public String getArmorname() {
+    }
+
+    public String getArmorname() {
         return armorname;
     }
 }
+     class Totalarmor {
+        public Armorhead kopf;
+        public ArmorBreastplate Brust;
+        public ArmorTrousers Hosen;
+        public ArmorShoes schuhe;
+        public ArmorShield schild;
+
+        public int setTotalArmor(Armorhead kopf, ArmorBreastplate Brust, ArmorTrousers Hosen, ArmorShoes schuhe, ArmorShield schild) {
+            this.kopf = kopf;
+            this.Brust = Brust;
+            this.Hosen = Hosen;
+            this.schuhe = schuhe;
+            this.schild = schild;
+            int totalarmor = kopf.getArmorhead() + Brust.getArmorBreastplate() + Hosen.getArmorTrousers() + schuhe.getArmorShoes() + schild.getArmorShield();
+            return totalarmor;
+        }
+
+        public int getTotalArmor() {
+            int totalarmor = kopf.getArmorhead() + Brust.getArmorBreastplate() + Hosen.getArmorTrousers() + schuhe.getArmorShoes() + schild.getArmorShield();
+            return totalarmor;
+        }
+
+    }
+
+
     class  Armorhead {
         public String armorheadname;
         public int armorhead;
@@ -57,7 +78,7 @@ public class Armor {
         public int setArmorBreastplate(int armorBreastplate) {
             this.armorBreastplate = armorBreastplate;
             return armorBreastplate;
-        }public int getArmorhead() {
+        }public int getArmorBreastplate() {
             return armorBreastplate;
         }
 
@@ -116,22 +137,29 @@ public class Armor {
         public String armorShieldname;
         public int armorShield;
 
-        public ArmorShield(String armorShieldname,int armorShield) {
+        public ArmorShield(String armorShieldname, int armorShield) {
             this.armorShieldname = armorShieldname;
             this.armorShield = armorShield;
         }
+
         public int setArmorShield(int armorShield) {
-            this.armorShield= armorShield;
-            return armorShield;
-        }public int getArmorShield() {
+            this.armorShield = armorShield;
             return armorShield;
         }
 
-        public  String setArmorShieldsname(String armorShieldname) {
+        public int getArmorShield() {
+            return armorShield;
+        }
+
+        public String setArmorShieldsname(String armorShieldname) {
             this.armorShieldname = armorShieldname;
             return armorShieldname;
-        }public String getArmorShieldname() {
+        }
+
+        public String getArmorShieldname() {
             return armorShieldname;
         }
     }
+
+
 

@@ -9,9 +9,9 @@ public class Charakter {
     public ArmorTrousers armorTrousers;
     public ArmorShoes armorShoes;
     public ArmorShield armorShield;
+    public Totalarmor totalarmor;
 
-
-   public Charakter(String Namen, Weapon weapon,int leben,Armorhead armorHead,ArmorBreastplate armorBreastplate,ArmorTrousers armorTrousers,ArmorShoes armorShoes,ArmorShield armorShield ){
+   public Charakter(String Namen, Weapon weapon,int leben,Armorhead armorHead,ArmorBreastplate armorBreastplate,ArmorTrousers armorTrousers,ArmorShoes armorShoes,ArmorShield armorShield,Totalarmor totalarmor ){
        this.name = Namen;
        this.weapon = weapon;
        this.leben = leben;
@@ -20,7 +20,7 @@ public class Charakter {
        this.armorTrousers = armorTrousers;
        this.armorShoes = armorShoes;
        this.armorShield = armorShield;
-
+       this.totalarmor=totalarmor;
 
    }
 

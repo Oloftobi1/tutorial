@@ -1,5 +1,4 @@
 package FirstProjekt;
-import com.sun.media.sound.RIFFReader;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -57,10 +56,11 @@ public class DiesRun {
 
 
         //Creatures
+        // TOTAL ARMOR EDITIEREN
         Charakter smallGoblin = new Charakter("Smallgoblin ",weapon[ran_weapon],10,randomArmorHead[ran_armorHead],randomArmorBreastplate[ran_armorBreastplate],
                 randomArmorTrousers[ran_armorTrousers],randomArmorShoes[ran_armorShoes],randomArmorShield[ran_armorShield]);
         Charakter largeGoblin = new Charakter("Largegoblin ",weapon[ran_weapon],15,randomArmorHead[ran_armorHead],randomArmorBreastplate[ran_armorBreastplate],
-                randomArmorTrousers[ran_armorTrousers],randomArmorShoes[ran_armorShoes],randomArmorShield[ran_armorShield]);
+                randomArmorTrousers[ran_armorTrousers],randomArmorShoes[ran_armorShoes],randomArmorShield[ran_armorShield],);
         Charakter bossGoblin = new Charakter("Bossgoblin ",weapon[ran_weapon],30,randomArmorHead[ran_armorHead],randomArmorBreastplate[ran_armorBreastplate],
                 randomArmorTrousers[ran_armorTrousers],randomArmorShoes[ran_armorShoes],randomArmorShield[ran_armorShield]);
         Charakter thieves = new Charakter("Thieves ",weapon[ran_weapon],15,randomArmorHead[ran_armorHead],randomArmorBreastplate[ran_armorBreastplate],
@@ -119,33 +119,48 @@ public class DiesRun {
    //     Armor totalArmor = new Armor("Armorset",randomArmorBreastplat[ran_armorBreastplate]);
 
 // Monster Drops Random armor the armor the monster has equipt or empty armor
-     /*   boolean fight = true;
-        while(fight){
+
+        while(true){
             System.out.printf("%s\n Damage : %d\n",yourCharakter.name,yourCharakter.weapon.damage);
-            System.out.printf("%s\n Armor :  %d\n",largeGoblin.name,largeGoblin.armor.getArmor());
+            System.out.printf("%s\n Armor :  %d\n",largeGoblin.name,largeGoblin.);
             System.out.printf("%s\n Health :  %d\n",largeGoblin.name,largeGoblin.leben);
-            int piercedamage = yourCharakter.weapon.getDamage()-largeGoblin.armor.getArmor();
+            int piercedamage = yourCharakter.weapon.getDamage()- largeGoblin.;
             System.out.printf("%s\n pierce Damage :  %d \n",yourCharakter.name,piercedamage);
             largeGoblin.leben = largeGoblin.leben - piercedamage;
             System.out.printf("%s\n Health left : %d\n",largeGoblin.name,largeGoblin.getLeben());
             if (largeGoblin.getLeben()<=0){
                 System.out.printf("%s is Dead\n",largeGoblin.name);
-                fight=false;
-                System.out.printf("%s dropped %s\n",largeGoblin.name,largeGoblin.armor.armorname);
-                System.out.printf("Do you wanna take the %s ?\n 1=yes\n 2=no \n",largeGoblin.armor.armorname);
+                break;
+                System.out.printf("%s dropped %s\n",largeGoblin.name,largeGoblin);
+                System.out.printf("You can Take one item. 1= %s\n 2=%s\n3= %s\n4= %s\n 5= %s 6 = nothing\n ",largeGoblin.armorHead.armorheadname,largeGoblin.armorBreastplate.armorBreastplatename,);
                 int item = input.nextInt();
                 if (item==1){
-                    yourCharakter.armor = largeGoblin.armor;
-                    System.out.println(yourCharakter.armor.armorname);
-                }else {
-
+                    yourCharakter.armorHead = largeGoblin.armorHead;
+                    System.out.printf("Congratulations you have a new Item : %s ",yourCharakter.armorHead.armorheadname);
                 }
+                else if (item==2){
+                    yourCharakter.armorBreastplate = largeGoblin.armorBreastplate;
+                    System.out.printf("Congratulations you have a new Item : %s ",yourCharakter.armorBreastplate.armorBreastplatename);
+                }
+                else if (item==3){
+                    yourCharakter.armorTrousers = largeGoblin.armorTrousers;
+                    System.out.printf("Congratulations you have a new Item : %s ",yourCharakter.armorTrousers.armorTrousersname);
+                }
+                else if (item==4){
+                    yourCharakter.armorShoes = largeGoblin.armorShoes;
+                    System.out.printf("Congratulations you have a new Item : %s ",yourCharakter.armorShoes.armorShoesname);
+                }
+               else if (item==5){
+                    yourCharakter.armorShield = largeGoblin.armorShield;
+                    System.out.printf("Congratulations you have a new Item : %s ",yourCharakter.armorShield.armorShieldname);
+                }
+
             }else if (yourCharakter.getLeben()<=0){
                 System.out.printf("%s is Dead",yourCharakter.name);
-                fight=false;
+                break;
             }
         }
-*/
+
     }
 
 }
